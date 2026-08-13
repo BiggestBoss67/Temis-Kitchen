@@ -1,8 +1,8 @@
 # Project Title: [Temi's Kitchen]
 
 ## Student Information
-* **Full Name:** Eberechukwu Osondo, Palesa Kotseli,Lenylcia Moholi Lopes, OnyeBuchi
-* **Student ID:** ST10536068, ST10531251, ST10535858
+* **Full Name:** Eberechukwu Osondo, Palesa Kotseli,Lenylcia Moholi Lopes, Onyebuchi Okolie
+* **Student ID:** ST10536068, ST10531251, ST10535858, ST10534194
 * **Module Code:** WEDE5020 (Part 1 - Foundation)
 * **Submission Date:** 14 August 2026
 
