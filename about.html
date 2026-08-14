@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Temi's Kitchen</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+    <!-- Embedded CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Dark High-Quality Background */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(rgba(15, 12, 12, 0.8), rgba(15, 12, 12, 0.9)),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header & Navigation Bar */
+        header {
+            background-color: rgba(20, 20, 20, 0.95);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #E65100;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #E65100;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FF7043;
+            background-color: rgba(230, 81, 0, 0.25);
+            text-shadow: 0 0 8px rgba(255, 112, 67, 0.8);
+            box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
+        }
+
+        /* Hide Toggle Checkbox & Hamburger Icon on Desktop */
+        #menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: #E65100;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Main Container Layout */
+        main {
+            flex: 1;
+            max-width: 1000px;
+            width: 90%;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Grid Layout for Mission/Vision & Values */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        /* Glass Cards */
+        .card-section {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #E65100;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #FF7043;
+            font-size: 1.25rem;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #cccccc;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Values List Styling */
+        .values-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .values-list li {
+            color: #cccccc;
+            margin-bottom: 14px;
+            line-height: 1.5;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .values-list li::before {
+            content: "🔸";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 0.85rem;
+        }
+
+        .values-list strong {
+            color: #ffffff;
+        }
+
+        /* Location Info Box */
+        .location-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 4px solid #E65100;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .location-box p {
+            margin-bottom: 0;
+            color: #ffffff;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(15, 15, 15, 0.95);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888888;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===================================================
+           MOBILE MEDIA QUERY (Placed at bottom to override)
+        =================================================== */
+        @media (max-width: 768px) {
+            header {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(20, 20, 20, 0.98);
+                border-bottom: 2px solid #E65100;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 0;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 12px;
+                border-radius: 0;
+            }
+
+            #menu-toggle:checked ~ nav {
+                display: block;
+            }
+
+            main {
+                margin: 20px auto;
+                width: 92%;
+            }
+
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <h1>Temi's Kitchen</h1>
+
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Story & Overview Section -->
+        <section class="card-section">
+            <h2>About Temi's Kitchen</h2>
+            <p>
+                Temi's Kitchen is a small food business located in Table View, Cape Town. The business offers Nigerian and West African cuisine, providing customers with traditional flavours and a selection of food options.
+            </p>
+
+            <h3>Our Story</h3>
+            <p>
+                Temi's Kitchen brings Nigerian and West African food to the Cape Town community. Its menu includes traditional dishes and popular favourites, offering customers an opportunity to experience authentic flavours from the region.
+            </p>
+        </section>
+
+        <!-- Mission, Vision & Values Grid -->
+        <div class="grid-2col">
+            <!-- Mission & Vision Card -->
+            <section class="card-section">
+                <h2>Our Purpose</h2>
+                
+                <h3>Our Mission</h3>
+                <p>
+                    The proposed mission of Temi's Kitchen is to provide customers with enjoyable Nigerian and West African food while creating a welcoming experience for people who appreciate traditional cuisine.
+                </p>
+
+                <h3>Our Vision</h3>
+                <p>
+                    The proposed vision is to become a recognised food destination in Cape Town for customers seeking authentic Nigerian and West African flavours.
+                </p>
+            </section>
+
+            <!-- Values Card -->
+            <section class="card-section">
+                <h2>Our Values</h2>
+                <ul class="values-list">
+                    <li><strong>Authenticity:</strong> Celebrating traditional Nigerian and West African flavours.</li>
+                    <li><strong>Quality:</strong> Providing enjoyable and carefully prepared food.</li>
+                    <li><strong>Customer Experience:</strong> Creating a welcoming experience for customers.</li>
+                    <li><strong>Community:</strong> Making West African cuisine accessible to the local community.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Where to Find Us Card -->
+        <section class="card-section">
+            <h2>Where to Find Us</h2>
+            <div class="location-box">
+                <p>📍 <strong>Temi's Kitchen Address:</strong><br>
+                Shop 6, 1 Dianthus Road<br>
+                Table View, Cape Town</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
