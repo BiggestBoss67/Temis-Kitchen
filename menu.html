@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Nigerian and West African cuisine, catering and custom orders offered by Temi's Kitchen.">
+    <title>Products &amp; Services | Temi's Kitchen</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+    <!-- Embedded CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Dark High-Quality Background */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(rgba(15, 12, 12, 0.8), rgba(15, 12, 12, 0.9)),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header & Brand Navigation */
+        header {
+            background-color: rgba(20, 20, 20, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #E65100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-mark {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        header h1, .brand-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #E65100;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FF7043;
+            background-color: rgba(230, 81, 0, 0.25);
+            text-shadow: 0 0 8px rgba(255, 112, 67, 0.8);
+            box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
+        }
+
+        /* Hide Toggle Checkbox & Hamburger Icon on Desktop */
+        #menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: #E65100;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Main Layout */
+        main {
+            flex: 1;
+            max-width: 1050px;
+            width: 90%;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Glass Cards */
+        .card-section {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1 {
+            color: #E65100;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #FF7043;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #cccccc;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Food Grid Layout */
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .food-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(230, 81, 0, 0.35);
+            border-color: rgba(230, 81, 0, 0.5);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .food-card-body {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .food-card h3 {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .food-card p {
+            font-size: 0.92rem;
+            color: #aaaaaa;
+            margin-bottom: 0;
+        }
+
+        /* Notice & Information Box */
+        .notice-box {
+            background: rgba(230, 81, 0, 0.15);
+            border-left: 4px solid #E65100;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .notice-box p {
+            margin-bottom: 0;
+            color: #e0e0e0;
+        }
+
+        /* Action Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #E65100;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #FF7043;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 81, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(15, 15, 15, 0.95);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888888;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===================================================
+           MOBILE MEDIA QUERY
+        =================================================== */
+        @media (max-width: 768px) {
+            header {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(20, 20, 20, 0.98);
+                border-bottom: 2px solid #E65100;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 0;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 12px;
+                border-radius: 0;
+            }
+
+            #menu-toggle:checked ~ nav {
+                display: block;
+            }
+
+            main {
+                margin: 20px auto;
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="brand">
+            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
+            <span class="brand-name">Temi's Kitchen</span>
+        </a>
+
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Menu &amp; Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Intro Section -->
+        <section class="card-section text-center">
+            <h1>Our Products &amp; Services</h1>
+            <h2>Nigerian &amp; West African Cuisine</h2>
+            <p>
+                Temi's Kitchen offers a selection of Nigerian and West African dishes prepared with traditional flavours. Customers can explore a variety of meals and specialities suitable for individual meals and different occasions.
+            </p>
+        </section>
+
+        <!-- Featured Dishes Section -->
+        <section class="card-section">
+            <h2>Featured Dishes</h2>
+
+            <div class="food-grid">
+                <!-- Dish 1 -->
+                <article class="food-card">
+                    <img src="images/jollof-rice.jpg" alt="Jollof rice">
+                    <div class="food-card-body">
+                        <h3>Jollof Rice</h3>
+                        <p>A popular West African rice dish prepared with a rich, flavourful tomato-based seasoning.</p>
+                    </div>
+                </article>
+
+                <!-- Dish 2 -->
+                <article class="food-card">
+                    <img src="images/grilled-chicken.jpg" alt="Grilled chicken">
+                    <div class="food-card-body">
+                        <h3>Grilled Chicken</h3>
+                        <p>Tender grilled chicken prepared with flavourful seasoning and served as part of the restaurant's food selection.</p>
+                    </div>
+                </article>
+
+                <!-- Dish 3 -->
+                <article class="food-card">
+                    <img src="images/peppered-snails.jpg" alt="Peppered snails">
+                    <div class="food-card-body">
+                        <h3>Peppered Snails</h3>
+                        <p>A traditional Nigerian speciality prepared with a spicy pepper-based sauce.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Other Specialities & Catering Grid -->
+        <section class="card-section">
+            <h2>Other Nigerian Specialities</h2>
+            <p>
+                Customers can enquire about other traditional Nigerian and West African dishes available from Temi's Kitchen.
+            </p>
+
+            <h2 style="margin-top: 25px;">Catering &amp; Custom Orders</h2>
+            <p>
+                Temi's Kitchen can cater to customers looking for food for special occasions and larger gatherings. Customers can make an enquiry to discuss catering or custom food orders.
+            </p>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="card-section text-center">
+            <h2>Make an Enquiry</h2>
+            <p>Interested in placing an order or enquiring about catering?</p>
+            <p>Use our Enquiry page to contact Temi's Kitchen and provide details about your request.</p>
+            <a href="enquiry.html" class="btn">Go to Enquiry Page</a>
+        </section>
+
+        <!-- Disclaimer / Note -->
+        <section class="card-section notice-box">
+            <h2>Please Note</h2>
+            <p>
+                Specific menu items, availability and prices may vary. Customers should contact Temi's Kitchen directly for the latest menu and pricing information.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
