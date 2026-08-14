@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 
-    <!-- Embedded CSS (Matching Enquiry Page Theme) -->
+    <!-- Embedded CSS -->
     <style>
         * {
             margin: 0;
@@ -71,6 +71,66 @@
             box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
         }
 
+        /* Hide Mobile Toggle Elements on Desktop */
+        #menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: #E65100;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Responsive Mobile Layout */
+        @media (max-width: 768px) {
+            header {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(20, 20, 20, 0.98);
+                border-bottom: 2px solid #E65100;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 0;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 12px;
+                border-radius: 0;
+            }
+
+            #menu-toggle:checked ~ nav {
+                display: block;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Main Grid Layout */
         main {
             flex: 1;
@@ -80,12 +140,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-        }
-
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* Glass Cards */
@@ -261,6 +315,11 @@
     <!-- Header Navigation -->
     <header>
         <h1>Temi's Kitchen</h1>
+
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
