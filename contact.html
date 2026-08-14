@@ -130,6 +130,69 @@
             font-size: 0.9rem;
         }
 
+        /* Uber Eats Button Styling */
+        .ubereats-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #06C167;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ubereats-btn:hover {
+            background-color: #049B52;
+            box-shadow: 0 4px 15px rgba(6, 193, 103, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* WhatsApp Box & Button Styling */
+        .whatsapp-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 4px solid #25D366;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .whatsapp-box h3 {
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transform: translateY(-2px);
+        }
+
         /* Form Controls */
         .form-group {
             margin-bottom: 18px;
@@ -215,24 +278,34 @@
         <!-- Left Side: Restaurant Info & Locations -->
         <section class="card-section">
             <h2>Get In Touch</h2>
-            <p>Have questions or feedback? Visit one of our branches or drop us a quick message!</p>
+            <p>Have questions or feedback? Visit our store, order online, or drop us a quick message!</p>
 
-    
-
+            <!-- Location 1: Physical Storefront -->
             <div class="branch-info">
-                <h3>Cape Town Branch</h3>
-                <p>📍 Shop 6,1 Dianthus Rd, Table View, Cape Town, 7441 </p>
+                <h3>Cape Town Main Branch</h3>
+                <p>📍 Shop 6, 1 Dianthus Rd, Table View, Cape Town, 7441</p>
                 <p>📞 Phone: +27 67 174 2601</p>
                 <p>⏰ Hours: Mon - Sat | 09:00 AM - 09:00 PM</p>
             </div>
 
-        </div class="whatsapp box">
-        <h3> 📲Fast Chat via Whatsapp</h3>
-        <p>Need a quick response for table Reservation or menu questions?</p>
+            <!-- Location 2: Online Delivery Hub -->
+            <div class="branch-info" style="border-left-color: #06C167;">
+                <h3>Online Delivery Hub (Uber Eats)</h3>
+                <p>🛵 Doorstep delivery across Cape Town</p>
+                <p>⏰ Hours: Mon - Sat | 09:00 AM - 08:30 PM</p>
+                <a href="https://www.ubereats.com/za/store/temis-foods-%26-catering/4tzgrRquXE-6hkTfxOJ8_g" target="_blank" class="ubereats-btn">
+                    🟢 Order on Uber Eats
+                </a>
+            </div>
 
-        <a href="https://wa.me/27671742601?text=Hello%20Temi's%20Kitchen,%20I%20have%20an%20inquiry." target="_blank" class="whatsapp-btn">
-        💬 Chat on WhatsApp
-    </a>
+            <!-- WhatsApp Direct Contact Box -->
+            <div class="whatsapp-box">
+                <h3>📲 Fast Chat via WhatsApp</h3>
+                <p>Need a quick response for table reservations or menu questions?</p>
+                <a href="https://wa.me/27671742601?text=Hello%20Temi's%20Kitchen,%20I%20have%20an%20inquiry." target="_blank" class="whatsapp-btn">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
         </section>
 
         <!-- Right Side: Quick Contact Form -->
