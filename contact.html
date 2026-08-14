@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Temi's Kitchen</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+    <!-- Embedded CSS (Matching Enquiry Page Theme) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Dark High-Quality Background */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(rgba(15, 12, 12, 0.8), rgba(15, 12, 12, 0.9)),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header & Navigation Bar */
+        header {
+            background-color: rgba(20, 20, 20, 0.95);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #E65100;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #E65100;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        /* Vibrant Glowing Nav Links */
+        nav ul li a:hover {
+            color: #FF7043;
+            background-color: rgba(230, 81, 0, 0.25);
+            text-shadow: 0 0 8px rgba(255, 112, 67, 0.8);
+            box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
+        }
+
+        /* Main Grid Layout */
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 90%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Glass Cards */
+        .card-section {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #E65100;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Location Details */
+        .branch-info {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 4px solid #E65100;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .branch-info h3 {
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .branch-info p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Form Controls */
+        .form-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #E65100;
+            box-shadow: 0 0 8px rgba(230, 81, 0, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #E65100;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: #FF7043;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 81, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(15, 15, 15, 0.95);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888888;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <h1>Temi's Kitchen</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main>
+
+        <!-- Left Side: Restaurant Info & Locations -->
+        <section class="card-section">
+            <h2>Get In Touch</h2>
+            <p>Have questions or feedback? Visit one of our branches or drop us a quick message!</p>
+
+            <div class="branch-info">
+                <h3>Johannesburg Flagship</h3>
+                <p>📍 123 Main Street, Rosebank, Johannesburg</p>
+                <p>📞 Phone: +27 11 987 6543</p>
+                <p>⏰ Hours: Mon - Sun | 10:00 AM - 10:00 PM</p>
+            </div>
+
+            <div class="branch-info">
+                <h3>Cape Town Branch</h3>
+                <p>📍 45 Waterfront Drive, Victoria & Alfred Waterfront</p>
+                <p>📞 Phone: +27 21 456 7890</p>
+                <p>⏰ Hours: Mon - Sun | 11:00 AM - 11:00 PM</p>
+            </div>
+        </section>
+
+        <!-- Right Side: Quick Contact Form -->
+        <section class="card-section">
+            <h2>Send a Direct Message</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="contactName">Your Name:</label>
+                    <input type="text" id="contactName" name="contactName" placeholder="e.g., Sarah Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email Address:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g., sarah@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g., Reservation Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
