@@ -63,7 +63,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Vibrant Glowing Nav Links */
         nav ul li a:hover {
             color: #FF7043;
             background-color: rgba(230, 81, 0, 0.25);
@@ -71,7 +70,7 @@
             box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
         }
 
-        /* Hide Mobile Toggle Elements on Desktop */
+        /* Hide Toggle Checkbox & Hamburger Icon on Desktop */
         #menu-toggle {
             display: none;
         }
@@ -84,54 +83,7 @@
             user-select: none;
         }
 
-        /* Responsive Mobile Layout */
-        @media (max-width: 768px) {
-            header {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: rgba(20, 20, 20, 0.98);
-                border-bottom: 2px solid #E65100;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-                z-index: 1000;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 10px 0;
-            }
-
-            nav ul li {
-                text-align: center;
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 12px;
-                border-radius: 0;
-            }
-
-            #menu-toggle:checked ~ nav {
-                display: block;
-            }
-
-            main {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Main Grid Layout */
+        /* Main Grid Layout (Desktop Default: 2 Columns) */
         main {
             flex: 1;
             max-width: 1100px;
@@ -307,6 +259,58 @@
             font-size: 0.85rem;
             color: #888888;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===================================================
+           MOBILE MEDIA QUERY (Placed at bottom to override)
+        =================================================== */
+        @media (max-width: 768px) {
+            header {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(20, 20, 20, 0.98);
+                border-bottom: 2px solid #E65100;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 0;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 12px;
+                border-radius: 0;
+            }
+
+            #menu-toggle:checked ~ nav {
+                display: block;
+            }
+
+            /* Stack sections vertically in 1 column on Mobile */
+            main {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                width: 92%;
+            }
         }
     </style>
 </head>
