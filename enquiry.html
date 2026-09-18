@@ -3,241 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Temi's Kitchen</title>
+    <title>Enquiry | Temi's Kitchen</title>
     
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 
-    <!-- All CSS Styles Embedded Directly -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Dark High-Quality Background */
-        body {
-            min-height: 100vh;
-            background: linear-gradient(rgba(15, 12, 12, 0.8), rgba(15, 12, 12, 0.9)),
-                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header & Navigation Bar */
-        header {
-            background-color: rgba(20, 20, 20, 0.95);
-            padding: 1.2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid #e65100;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #e65100;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: #f1f1f1;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #FF7043;
-            background-color: rgba(230, 81, 0, 0.25);
-            text-shadow: 0 0 8px rgba(255, 112, 67, 0.8);
-            box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
-        }
-
-        /* Hide Toggle Checkbox & Icon on Desktop */
-        #menu-toggle {
-            display: none;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 2rem;
-            color: #e65100;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        /* Responsive Mobile Layout Rules */
-        @media (max-width: 768px) {
-            header {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: rgba(20, 20, 20, 0.98);
-                border-bottom: 2px solid #e65100;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-                z-index: 1000;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 10px 0;
-            }
-
-            nav ul li {
-                text-align: center;
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 12px;
-                border-radius: 0;
-            }
-
-            /* Unfold Dropdown when 3-line icon is tapped */
-            #menu-toggle:checked ~ nav {
-                display: block;
-            }
-        }
-
-        /* Main Container Layout */
-        main {
-            flex: 1;
-            max-width: 800px;
-            width: 90%;
-            margin: 40px auto;
-        }
-
-        /* Glassmorphism Form Card */
-        .enquiry-section {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-
-        h2 {
-            color: #e65100;
-            font-size: 2rem;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-            color: #cccccc;
-            margin-bottom: 30px;
-        }
-
-        /* Form Controls */
-        .form-group {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #e0e0e0;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px 16px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            color: #ffffff;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        input::placeholder, textarea::placeholder {
-            color: #888888;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #e65100;
-            box-shadow: 0 0 8px rgba(230, 81, 0, 0.5);
-        }
-
-        select option {
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-
-        /* Submit Button */
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: #e65100;
-            color: #ffffff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #FF7043;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(230, 81, 0, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(15, 15, 15, 0.95);
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #888888;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Semantic Header -->
+    <!-- Header & Navigation -->
     <header>
-        <h1>Temi's Kitchen</h1>
+        <a href="index.html" class="brand">
+            <!-- Responsive Logo -->
+            <picture>
+                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
+                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
+                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
+            </picture>
+            <h1>Temi's Kitchen</h1>
+        </a>
 
         <!-- Hamburger Menu Toggle (Mobile) -->
         <input type="checkbox" id="menu-toggle">
@@ -246,38 +32,42 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Menu &amp; Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section class="enquiry-section">
-            <h2>Catering & Event Enquiry</h2>
+        <section>
+            <h2>Catering &amp; Event Enquiry</h2>
             <p>Please fill out the details below and our team will get back to you shortly.</p>
 
-            <form action="#" method="POST" class="enquiry-form">
+            <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="fullName">Full Name:</label>
+                    <label for="fullName">Full Name:</label><br>
                     <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe" required>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="email">Email Address:</label>
+                    <label for="email">Email Address:</label><br>
                     <input type="email" id="email" name="email" placeholder="e.g., john@example.com" required>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="phone">Phone Number:</label>
+                    <label for="phone">Phone Number:</label><br>
                     <input type="tel" id="phone" name="phone" placeholder="e.g., +27 12 345 6789" required>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="serviceType">Service Type:</label>
+                    <label for="serviceType">Service Type:</label><br>
                     <select id="serviceType" name="serviceType" required>
                         <option value="" disabled selected>-- Select a Service --</option>
                         <option value="event-catering">Event Catering</option>
@@ -286,21 +76,25 @@
                         <option value="general-inquiry">General Inquiry</option>
                     </select>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="eventDate">Event Date:</label>
+                    <label for="eventDate">Event Date:</label><br>
                     <input type="date" id="eventDate" name="eventDate" required>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="guestCount">Number of Guests:</label>
+                    <label for="guestCount">Number of Guests:</label><br>
                     <input type="number" id="guestCount" name="guestCount" min="1" placeholder="e.g., 50" required>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="comments">Additional Comments / Special Requests:</label>
-                    <textarea id="comments" name="comments" rows="5" placeholder="Tell us more about your event requirements..."></textarea>
+                    <label for="comments">Additional Comments / Special Requests:</label><br>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Tell us more about your event requirements..." style="width: 100%;"></textarea>
                 </div>
+                <br>
 
                 <button type="submit">Submit Enquiry</button>
             </form>
@@ -309,6 +103,7 @@
 
     <!-- Footer -->
     <footer>
+        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
         <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
 
