@@ -9,407 +9,92 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 
-    <!-- Embedded CSS Theme -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Dark High-Quality Background */
-        body {
-            min-height: 100vh;
-            background: linear-gradient(rgba(15, 12, 12, 0.8), rgba(15, 12, 12, 0.9)),
-                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header & Brand Navigation */
-        header.site-header {
-            background-color: rgba(20, 20, 20, 0.95);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid #E65100;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-mark {
-            width: 44px;
-            height: 44px;
-            object-fit: contain;
-            border-radius: 50%;
-        }
-
-        .brand-name {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #E65100;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .side-menu {
-            display: flex;
-            list-style: none;
-            gap: 15px;
-        }
-
-        .side-menu a {
-            color: #f1f1f1;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .side-menu a:hover {
-            color: #FF7043;
-            background-color: rgba(230, 81, 0, 0.25);
-            text-shadow: 0 0 8px rgba(255, 112, 67, 0.8);
-            box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
-        }
-
-        .menu-icon {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: #E65100;
-            cursor: pointer;
-        }
-
-        /* Main Container Layout */
-        main {
-            flex: 1;
-            max-width: 1000px;
-            width: 90%;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        /* Glass Cards */
-        section {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-
-        .intro, .call-to-action {
-            text-align: center;
-        }
-
-        h1 {
-            color: #E65100;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            color: #E65100;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #cccccc;
-            margin-bottom: 15px;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        /* Sitemap Grid List */
-        .sitemap-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 0;
-        }
-
-        .sitemap-list li {
-            background: rgba(0, 0, 0, 0.4);
-            border-left: 4px solid #E65100;
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .sitemap-list li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(230, 81, 0, 0.3);
-        }
-
-        .sitemap-list a {
-            text-decoration: none;
-            color: #FF7043;
-            font-size: 1.2rem;
-            display: inline-block;
-            margin-bottom: 8px;
-            transition: color 0.3s ease;
-        }
-
-        .sitemap-list a:hover {
-            color: #ffffff;
-        }
-
-        .sitemap-list p {
-            font-size: 0.9rem;
-            color: #aaaaaa;
-            margin-bottom: 0;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: #E65100;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background-color: #FF7043;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(230, 81, 0, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(15, 15, 15, 0.95);
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #888888;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        footer p {
-            margin-bottom: 5px;
-            color: #888888;
-        }
-
-        /* Mobile View */
-        @media (max-width: 768px) {
-            header.site-header {
-                position: relative;
-            }
-
-            .menu-icon {
-                display: block;
-            }
-
-            .side-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: rgba(20, 20, 20, 0.98);
-                border-bottom: 2px solid #E65100;
-                padding: 10px 0;
-                gap: 0;
-            }
-
-            .side-menu.active {
-                display: flex;
-            }
-
-            .side-menu a {
-                text-align: center;
-                padding: 12px;
-                border-radius: 0;
-            }
-
-            main {
-                margin: 20px auto;
-                width: 92%;
-            }
-        }
-    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Header and navigation -->
-    <header class="site-header">
-
+    <!-- Header & Navigation -->
+    <header>
         <a href="index.html" class="brand">
-            <img
-                src="images/temis-kitchen-logo.png"
-                alt="Temi's Kitchen logo"
-                class="logo-mark"
-                width="44"
-                height="44"
-            >
-            <span class="brand-name">Temi's Kitchen</span>
+            <!-- Responsive Logo -->
+            <picture>
+                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
+                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
+                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
+            </picture>
+            <h1>Temi's Kitchen</h1>
         </a>
 
-        <button
-            class="menu-icon"
-            type="button"
-            onclick="toggleMenu()"
-            aria-label="Open navigation menu"
-            aria-controls="sideMenu"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-        <nav class="side-menu" id="sideMenu" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Menu &amp; Services</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="contact.html">Contact</a>
-            <a href="sitemap.html">Sitemap</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Menu &amp; Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
         </nav>
-
     </header>
 
-    <!-- Sitemap content -->
+    <!-- Main Content -->
     <main>
-
-        <section class="intro">
+        <section>
             <h1>Website Sitemap</h1>
-
-            <p>
-                Use the links below to explore the different pages of
-                Temi's Kitchen.
-            </p>
+            <p>Use the links below to explore the different pages of Temi's Kitchen.</p>
+            <br>
+            <ul>
+                <li>
+                    <a href="index.html"><strong>Home</strong></a>
+                    <p>Learn more about Temi's Kitchen and our Nigerian and West African cuisine.</p>
+                </li>
+                <br>
+                <li>
+                    <a href="about.html"><strong>About</strong></a>
+                    <p>Find out more about Temi's Kitchen.</p>
+                </li>
+                <br>
+                <li>
+                    <a href="services.html"><strong>Menu &amp; Services</strong></a>
+                    <p>Explore our featured dishes, catering and custom order services.</p>
+                </li>
+                <br>
+                <li>
+                    <a href="enquiry.html"><strong>Enquiry</strong></a>
+                    <p>Send an enquiry about an order, catering or a custom food request.</p>
+                </li>
+                <br>
+                <li>
+                    <a href="contact.html"><strong>Contact</strong></a>
+                    <p>Find our contact details and location.</p>
+                </li>
+                <br>
+                <li>
+                    <a href="sitemap.html"><strong>Sitemap</strong></a>
+                    <p>View all the pages available on this website.</p>
+                </li>
+            </ul>
         </section>
-
-        <section class="sitemap-section">
-
-            <nav aria-label="Sitemap links">
-                <ul class="sitemap-list">
-                    <li>
-                        <a href="index.html">
-                            <strong>Home</strong>
-                        </a>
-                        <p>
-                            Learn more about Temi's Kitchen and our Nigerian
-                            and West African cuisine.
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            <strong>About</strong>
-                        </a>
-                        <p>
-                            Find out more about Temi's Kitchen.
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href="services.html">
-                            <strong>Menu &amp; Services</strong>
-                        </a>
-                        <p>
-                            Explore our featured dishes, catering and custom
-                            order services.
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href="enquiry.html">
-                            <strong>Enquiry</strong>
-                        </a>
-                        <p>
-                            Send an enquiry about an order, catering or a
-                            custom food request.
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            <strong>Contact</strong>
-                        </a>
-                        <p>
-                            Find our contact details and location.
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href="sitemap.html">
-                            <strong>Sitemap</strong>
-                        </a>
-                        <p>
-                            View all the pages available on this website.
-                        </p>
-                    </li>
-                </ul>
-            </nav>
-
-        </section>
-
-        <section class="call-to-action">
+        <br>
+        
+        <section>
             <h2>Visit Temi's Kitchen</h2>
-
-            <p>
-                Shop 6, 1 Dianthus Road, Table View, Cape Town
-            </p>
-
-            <a href="contact.html" class="btn">
-                Contact Us
-            </a>
+            <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+            <br>
+            <a href="contact.html">Contact Us</a>
         </section>
-
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>
-            Shop 6, 1 Dianthus Road, Table View, Cape Town
-        </p>
-
-        <p>
-            &copy; 2026 Temi's Kitchen
-        </p>
+        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript Mobile Toggle Function -->
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById('sideMenu');
-            const button = document.querySelector('.menu-icon');
-            nav.classList.toggle('active');
-            const isExpanded = nav.classList.contains('active');
-            button.setAttribute('aria-expanded', isExpanded);
-        }
-    </script>
-    <script src="js/menu.js"></script>
 
 </body>
 </html>
