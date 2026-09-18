@@ -8,314 +8,20 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 
-    <!-- Embedded CSS -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Dark High-Quality Background */
-        body {
-            min-height: 100vh;
-            background: linear-gradient(rgba(15, 12, 12, 0.8), rgba(15, 12, 12, 0.9)),
-                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header & Brand Navigation */
-        header {
-            background-color: rgba(20, 20, 20, 0.95);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid #E65100;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-mark {
-            width: 44px;
-            height: 44px;
-            object-fit: contain;
-            border-radius: 50%;
-        }
-
-        header h1 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #E65100;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 15px;
-        }
-
-        nav ul li a {
-            color: #f1f1f1;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #FF7043;
-            background-color: rgba(230, 81, 0, 0.25);
-            text-shadow: 0 0 8px rgba(255, 112, 67, 0.8);
-            box-shadow: 0 0 12px rgba(230, 81, 0, 0.6);
-        }
-
-        /* Hide Mobile Toggle Checkbox on Desktop */
-        #menu-toggle {
-            display: none;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 2rem;
-            color: #E65100;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        /* Main Container Layout */
-        main {
-            flex: 1;
-            max-width: 1050px;
-            width: 90%;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        /* Glass Cards */
-        .card-section {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        h2 {
-            color: #E65100;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        p {
-            color: #cccccc;
-            margin-bottom: 15px;
-            line-height: 1.6;
-            font-size: 1.05rem;
-        }
-
-        /* Feature List Styling */
-        .features-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .features-list li {
-            background: rgba(0, 0, 0, 0.4);
-            border-left: 4px solid #E65100;
-            padding: 15px;
-            border-radius: 6px;
-            color: #ffffff;
-            font-weight: 500;
-        }
-
-        /* Food Gallery Grid */
-        .food-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .food-card {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .food-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(230, 81, 0, 0.3);
-        }
-
-        .food-card img {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .food-card-info {
-            padding: 15px;
-        }
-
-        .food-card-info h3 {
-            color: #ffffff;
-            font-size: 1.15rem;
-            margin-bottom: 5px;
-        }
-
-        .food-card-info p {
-            font-size: 0.88rem;
-            color: #aaaaaa;
-            margin-bottom: 0;
-        }
-
-        /* CTA Action Buttons */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #E65100;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #FF7043;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(230, 81, 0, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #E65100;
-        }
-
-        .btn-outline:hover {
-            background-color: rgba(230, 81, 0, 0.2);
-        }
-
-        /* Location Subtitle Box */
-        .location-tag {
-            display: inline-block;
-            background: rgba(230, 81, 0, 0.2);
-            border: 1px solid #E65100;
-            color: #FF7043;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(15, 15, 15, 0.95);
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #888888;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* ===================================================
-           MOBILE MEDIA QUERY
-        =================================================== */
-        @media (max-width: 768px) {
-            header {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: rgba(20, 20, 20, 0.98);
-                border-bottom: 2px solid #E65100;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-                z-index: 1000;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 10px 0;
-            }
-
-            nav ul li {
-                text-align: center;
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 12px;
-                border-radius: 0;
-            }
-
-            #menu-toggle:checked ~ nav {
-                display: block;
-            }
-
-            main {
-                margin: 20px auto;
-                width: 92%;
-            }
-        }
-    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Header & Navigation -->
     <header>
         <a href="index.html" class="brand">
-            <!-- Her logo image -->
-            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
+            <!-- Responsive Logo -->
+            <picture>
+                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
+                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
+                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
+            </picture>
             <h1>Temi's Kitchen</h1>
         </a>
 
@@ -353,11 +59,14 @@
                 Explore a selection of Nigerian and West African dishes, including favourites such as jollof rice, grilled chicken, and other traditional specialities.
             </p>
 
-            <!-- Photo Gallery Grid for her pictures -->
+            <!-- Photo Gallery Grid -->
             <div class="food-gallery">
                 <div class="food-card">
-                    <!-- Replace image filename with photos she provided -->
-                    <img src="images/jollof.jpg" alt="Authentic Jollof Rice">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="images/jollof.jpg">
+                        <source media="(max-width: 768px)" srcset="images/jollof.jpg">
+                        <img src="images/jollof.jpg" alt="Authentic Jollof Rice">
+                    </picture>
                     <div class="food-card-info">
                         <h3>Smokey Jollof Rice</h3>
                         <p>Richly seasoned and served with tender grilled chicken.</p>
@@ -365,8 +74,11 @@
                 </div>
 
                 <div class="food-card">
-                    <!-- Replace image filename with photos she provided -->
-                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken Special">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="images/grilled-chicken.jpg">
+                        <source media="(max-width: 768px)" srcset="images/grilled-chicken.jpg">
+                        <img src="images/grilled-chicken.jpg" alt="Grilled Chicken Special">
+                    </picture>
                     <div class="food-card-info">
                         <h3>Suya &amp; Grilled Chicken</h3>
                         <p>Marinated with authentic West African spices and grilled to perfection.</p>
@@ -374,8 +86,11 @@
                 </div>
 
                 <div class="food-card">
-                    <!-- Replace image filename with photos she provided -->
-                    <img src="images/specialty.jpg" alt="Traditional Specialties">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="images/specialty.jpg">
+                        <source media="(max-width: 768px)" srcset="images/specialty.jpg">
+                        <img src="images/specialty.jpg" alt="Traditional Specialties">
+                    </picture>
                     <div class="food-card-info">
                         <h3>Traditional Specialties</h3>
                         <p>Freshly cooked traditional meals made for dine-in or takeaway.</p>
