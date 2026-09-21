@@ -3,33 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Authentic Nigerian and West African cuisine served in Table View and Cape Town CBD.">
     <title>Home | Temi's Kitchen</title>
-    
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <a href="index.html" class="brand">
-            <!-- Responsive Logo -->
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
-                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
-                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
-            </picture>
+            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
             <h1>Temi's Kitchen</h1>
         </a>
 
-        <!-- Hamburger Menu Toggle (Mobile) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
 
-        <nav>
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -41,94 +30,52 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-
-        <!-- Section 1: Hero Welcome -->
-        <section class="card-section text-center">
-            <h2>Authentic Nigerian &amp; West African Cuisine</h2>
-            <p>
-                Welcome to Temi's Kitchen, a Cape Town food business bringing traditional Nigerian and West African flavours to Table View. Discover delicious food inspired by authentic West African cuisine in a welcoming setting.
-            </p>
+        <section class="text-center">
+            <h1>Welcome to Temi's Kitchen</h1>
+            <p>Bringing authentic Nigerian and West African flavours to Table View and Cape Town CBD.</p>
+            <div style="margin-top: 15px;">
+                <a href="services.html" class="btn">Explore Our Menu</a>
+                <a href="enquiry.html" class="btn">Place an Enquiry</a>
+            </div>
         </section>
 
-        <!-- Section 2: Our Food & Photo Gallery -->
-        <section class="card-section">
-            <h2>Our Food</h2>
-            <p>
-                Explore a selection of Nigerian and West African dishes, including favourites such as jollof rice, grilled chicken, and other traditional specialities.
-            </p>
-
-            <!-- Photo Gallery Grid -->
+        <section>
+            <h2>Featured Dishes</h2>
             <div class="food-gallery">
-                <div class="food-card">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/jollof.jpg">
-                        <source media="(max-width: 768px)" srcset="images/jollof.jpg">
-                        <img src="images/jollof.jpg" alt="Authentic Jollof Rice">
-                    </picture>
+                <article class="food-card">
+                    <img src="images/jollof-rice.jpg" alt="Jollof Rice">
                     <div class="food-card-info">
-                        <h3>Smokey Jollof Rice</h3>
-                        <p>Richly seasoned and served with tender grilled chicken.</p>
+                        <h3>Jollof Rice</h3>
+                        <p>A classic West African favourite cooked in rich tomato and pepper sauce.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="food-card">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/grilled-chicken.jpg">
-                        <source media="(max-width: 768px)" srcset="images/grilled-chicken.jpg">
-                        <img src="images/grilled-chicken.jpg" alt="Grilled Chicken Special">
-                    </picture>
+                <article class="food-card">
+                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
                     <div class="food-card-info">
-                        <h3>Suya &amp; Grilled Chicken</h3>
-                        <p>Marinated with authentic West African spices and grilled to perfection.</p>
+                        <h3>Grilled Chicken</h3>
+                        <p>Seasoned with traditional spices and grilled to perfection.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="food-card">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/specialty.jpg">
-                        <source media="(max-width: 768px)" srcset="images/specialty.jpg">
-                        <img src="images/specialty.jpg" alt="Traditional Specialties">
-                    </picture>
+                <article class="food-card">
+                    <img src="images/peppered-snails.jpg" alt="Peppered Snails">
                     <div class="food-card-info">
-                        <h3>Traditional Specialties</h3>
-                        <p>Freshly cooked traditional meals made for dine-in or takeaway.</p>
+                        <h3>Peppered Snails</h3>
+                        <p>Spicy Nigerian delicacy prepared with fresh peppers and authentic spices.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
-
-        <!-- Section 3: Why Choose Us -->
-        <section class="card-section">
-            <h2>Why Temi's Kitchen?</h2>
-            <ul class="features-list">
-                <li>Authentic Nigerian &amp; West African flavours</li>
-                <li>A variety of traditional food options</li>
-                <li>Food and catering options for different occasions</li>
-                <li>Convenient Table View location</li>
-            </ul>
-        </section>
-
-        <!-- Section 4: Call To Action -->
-        <section class="card-section text-center">
-            <h2>Ready to Discover the Flavours of West Africa?</h2>
-            <div class="location-tag">📍 Shop 6, 1 Dianthus Road, Table View, Cape Town</div>
-            
-            <div class="btn-group">
-                <a href="services.html" class="btn">View Products &amp; Services</a>
-                <a href="enquiry.html" class="btn btn-outline">Make an Enquiry</a>
-                <a href="contact.html" class="btn btn-outline">Visit Us</a>
-            </div>
-        </section>
-
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Main Branch: Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Express Pick-Up Hub: Cape Town CBD</p>
         <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

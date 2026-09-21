@@ -3,33 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Temi's Kitchen in Table View or Cape Town CBD.">
     <title>Contact Us | Temi's Kitchen</title>
-    
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <a href="index.html" class="brand">
-            <!-- Responsive Logo -->
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
-                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
-                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
-            </picture>
+            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
             <h1>Temi's Kitchen</h1>
         </a>
 
-        <!-- Hamburger Menu Toggle (Mobile) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
 
-        <nav>
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -41,83 +30,34 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Left Side: Restaurant Info & Locations -->
         <section>
-            <h2>Get In Touch</h2>
-            <p>Have questions or feedback? Visit our store, order online, or drop us a quick message!</p>
+            <h1>Contact Us</h1>
+            <p>Reach out to us directly or visit one of our Cape Town locations.</p>
 
-            <!-- Location 1: Physical Storefront -->
             <div class="branch-info">
-                <h3>Cape Town Main Branch</h3>
-                <p>📍 Shop 6, 1 Dianthus Rd, Table View, Cape Town, 7441</p>
-                <p>📞 Phone: +27 67 174 2601</p>
-                <p>⏰ Hours: Mon - Sat | 09:00 AM - 09:00 PM</p>
+                <h3>📍 Main Branch (Table View)</h3>
+                <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
             </div>
-            <br>
 
-            <!-- Location 2: Online Delivery Hub -->
             <div class="branch-info">
-                <h3>Online Delivery Hub (Uber Eats)</h3>
-                <p>🛵 Doorstep delivery across Cape Town</p>
-                <p>⏰ Hours: Mon - Sat | 09:00 AM - 08:30 PM</p>
-                <br>
-                <a href="https://www.ubereats.com/za/store/temis-foods-%26-catering/4tzgrRquXE-6hkTfxOJ8_g" target="_blank">
-                    Order on Uber Eats
-                </a>
+                <h3>📍 Express Pick-Up Hub (Cape Town CBD)</h3>
+                <p>Cape Town Central, Cape Town</p>
             </div>
-            <br>
 
-            <!-- WhatsApp Direct Contact Box -->
             <div class="whatsapp-box">
-                <h3>📲 Fast Chat via WhatsApp</h3>
-                <p>Need a quick response for table reservations or menu questions?</p>
-                <br>
-                <a href="https://wa.me/27671742601?text=Hello%20Temi's%20Kitchen,%20I%20have%20an%20inquiry." target="_blank">
-                    Chat on WhatsApp
-                </a>
+                <h3>💬 WhatsApp &amp; Direct Ordering</h3>
+                <p>Order directly or enquire via WhatsApp: <strong>+27 00 000 0000</strong></p>
             </div>
-        </section>
-
-        <!-- Right Side: Quick Contact Form -->
-        <section>
-            <h2>Send a Direct Message</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="contactName">Your Name:</label><br>
-                    <input type="text" id="contactName" name="contactName" placeholder="e.g., Sarah Smith" required>
-                </div>
-                <br>
-
-                <div class="form-group">
-                    <label for="contactEmail">Email Address:</label><br>
-                    <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g., sarah@example.com" required>
-                </div>
-                <br>
-
-                <div class="form-group">
-                    <label for="subject">Subject:</label><br>
-                    <input type="text" id="subject" name="subject" placeholder="e.g., Reservation Inquiry" required>
-                </div>
-                <br>
-
-                <div class="form-group">
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." style="width: 100%;" required></textarea>
-                </div>
-                <br>
-
-                <button type="submit">Send Message</button>
-            </form>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Main Branch: Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Express Pick-Up Hub: Cape Town CBD</p>
         <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,33 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit a catering or custom order enquiry to Temi's Kitchen.">
     <title>Enquiry | Temi's Kitchen</title>
-    
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <a href="index.html" class="brand">
-            <!-- Responsive Logo -->
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
-                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
-                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
-            </picture>
+            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
             <h1>Temi's Kitchen</h1>
         </a>
 
-        <!-- Hamburger Menu Toggle (Mobile) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
 
-        <nav>
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -41,71 +30,50 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
         <section>
-            <h2>Catering &amp; Event Enquiry</h2>
-            <p>Please fill out the details below and our team will get back to you shortly.</p>
+            <h1>Online Service &amp; Quote Enquiry</h1>
+            <p>Fill out the form below to enquire about custom food orders or event catering.</p>
+            
+            <div id="formFeedback" class="feedback-box"></div>
 
-            <form action="#" method="POST">
+            <form id="enquiryForm" novalidate>
                 <div class="form-group">
-                    <label for="fullName">Full Name:</label><br>
-                    <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe" required>
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
                 </div>
-                <br>
 
                 <div class="form-group">
-                    <label for="email">Email Address:</label><br>
-                    <input type="email" id="email" name="email" placeholder="e.g., john@example.com" required>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
                 </div>
-                <br>
 
                 <div class="form-group">
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="tel" id="phone" name="phone" placeholder="e.g., +27 12 345 6789" required>
-                </div>
-                <br>
-
-                <div class="form-group">
-                    <label for="serviceType">Service Type:</label><br>
-                    <select id="serviceType" name="serviceType" required>
-                        <option value="" disabled selected>-- Select a Service --</option>
-                        <option value="event-catering">Event Catering</option>
-                        <option value="private-chef">Private Chef Service</option>
-                        <option value="corporate-lunch">Corporate Lunch Box</option>
-                        <option value="general-inquiry">General Inquiry</option>
+                    <label for="serviceType">Service Requested *</label>
+                    <select id="serviceType" name="serviceType">
+                        <option value="">-- Select an option --</option>
+                        <option value="catering">Event Catering</option>
+                        <option value="custom">Custom Food Order</option>
+                        <option value="general">General Enquiry</option>
                     </select>
                 </div>
-                <br>
 
                 <div class="form-group">
-                    <label for="eventDate">Event Date:</label><br>
-                    <input type="date" id="eventDate" name="eventDate" required>
+                    <label for="message">Details / Special Requests *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Provide event date, guest count, or meal details..."></textarea>
                 </div>
-                <br>
 
-                <div class="form-group">
-                    <label for="guestCount">Number of Guests:</label><br>
-                    <input type="number" id="guestCount" name="guestCount" min="1" placeholder="e.g., 50" required>
-                </div>
-                <br>
-
-                <div class="form-group">
-                    <label for="comments">Additional Comments / Special Requests:</label><br>
-                    <textarea id="comments" name="comments" rows="5" placeholder="Tell us more about your event requirements..." style="width: 100%;"></textarea>
-                </div>
-                <br>
-
-                <button type="submit">Submit Enquiry</button>
+                <button type="submit" class="btn">Submit Enquiry</button>
             </form>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Main Branch: Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Express Pick-Up Hub: Cape Town CBD</p>
         <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

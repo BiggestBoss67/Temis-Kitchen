@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Nigerian and West African cuisine, catering and custom orders offered by Temi's Kitchen.">
-    <title>Products &amp; Services | Temi's Kitchen</title>
-
-    <!-- Google Fonts -->
+    <meta name="description" content="Explore Nigerian & West African cuisine and catering services offered by Temi's Kitchen.">
+    <title>Menu &amp; Services | Temi's Kitchen</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <a href="index.html" class="brand">
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
-                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
-            </picture>
-            <span class="brand-name">Temi's Kitchen</span>
+            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
+            <h1>Temi's Kitchen</h1>
         </a>
 
-        <!-- Hamburger Menu Toggle (Mobile) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
 
-        <nav>
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -40,100 +30,59 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-
-        <!-- Intro Section -->
-        <section class="card-section text-center">
-            <h1>Our Products &amp; Services</h1>
-            <h2>Nigerian &amp; West African Cuisine</h2>
-            <p>
-                Temi's Kitchen offers a selection of Nigerian and West African dishes prepared with traditional flavours. Customers can explore a variety of meals and specialities suitable for individual meals and different occasions.
-            </p>
+        <section class="text-center">
+            <h1>Our Menu &amp; Services</h1>
+            <p>Filter through our selection of West African specialties and catering options.</p>
+            
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="mains">Main Dishes</button>
+                <button class="filter-btn" data-filter="specialties">Specialties</button>
+            </div>
         </section>
 
-        <!-- Featured Dishes Section -->
-        <section class="card-section">
-            <h2>Featured Dishes</h2>
-
+        <section>
             <div class="food-grid">
-                <!-- Dish 1 -->
-                <article class="food-card">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/jollof-rice.jpg">
-                        <source media="(max-width: 768px)" srcset="images/jollof-rice.jpg">
-                        <img src="images/jollof-rice.jpg" alt="Jollof rice">
-                    </picture>
+                <article class="food-card" data-category="mains">
+                    <img src="images/jollof-rice.jpg" alt="Jollof Rice">
                     <div class="food-card-body">
                         <h3>Jollof Rice</h3>
-                        <p>A popular West African rice dish prepared with a rich, flavourful tomato-based seasoning.</p>
+                        <p>A classic West African rice dish prepared with a rich tomato-based seasoning.</p>
                     </div>
                 </article>
 
-                <!-- Dish 2 -->
-                <article class="food-card">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/grilled-chicken.jpg">
-                        <source media="(max-width: 768px)" srcset="images/grilled-chicken.jpg">
-                        <img src="images/grilled-chicken.jpg" alt="Grilled chicken">
-                    </picture>
+                <article class="food-card" data-category="mains">
+                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
                     <div class="food-card-body">
                         <h3>Grilled Chicken</h3>
-                        <p>Tender grilled chicken prepared with flavourful seasoning and served as part of the restaurant's food selection.</p>
+                        <p>Tender grilled chicken prepared with custom spices.</p>
                     </div>
                 </article>
 
-                <!-- Dish 3 -->
-                <article class="food-card">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/peppered-snails.jpg">
-                        <source media="(max-width: 768px)" srcset="images/peppered-snails.jpg">
-                        <img src="images/peppered-snails.jpg" alt="Peppered snails">
-                    </picture>
+                <article class="food-card" data-category="specialties">
+                    <img src="images/peppered-snails.jpg" alt="Peppered Snails">
                     <div class="food-card-body">
                         <h3>Peppered Snails</h3>
-                        <p>A traditional Nigerian speciality prepared with a spicy pepper-based sauce.</p>
+                        <p>Traditional Nigerian delicacy prepared in spicy pepper sauce.</p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Other Specialities & Catering Grid -->
-        <section class="card-section">
-            <h2>Other Nigerian Specialities</h2>
-            <p>
-                Customers can enquire about other traditional Nigerian and West African dishes available from Temi's Kitchen.
-            </p>
-
+        <section class="text-center">
             <h2>Catering &amp; Custom Orders</h2>
-            <p>
-                Temi's Kitchen can cater to customers looking for food for special occasions and larger gatherings. Customers can make an enquiry to discuss catering or custom food orders.
-            </p>
+            <p>We provide full catering services for private events, corporate gatherings, and celebrations.</p>
+            <a href="enquiry.html" class="btn">Request Catering Quote</a>
         </section>
-
-        <!-- Call to Action Section -->
-        <section class="card-section text-center">
-            <h2>Make an Enquiry</h2>
-            <p>Interested in placing an order or enquiring about catering?</p>
-            <p>Use our Enquiry page to contact Temi's Kitchen and provide details about your request.</p>
-            <a href="enquiry.html" class="btn">Go to Enquiry Page</a>
-        </section>
-
-        <!-- Disclaimer / Note -->
-        <section class="card-section notice-box">
-            <h2>Please Note</h2>
-            <p>
-                Specific menu items, availability and prices may vary. Customers should contact Temi's Kitchen directly for the latest menu and pricing information.
-            </p>
-        </section>
-
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Main Branch: Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Express Pick-Up Hub: Cape Town CBD</p>
         <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

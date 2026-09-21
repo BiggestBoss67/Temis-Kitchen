@@ -1,36 +1,50 @@
-# Project Title: [Temi's Kitchen]
+# Temi's Kitchen - Web Development Project (WEDE5020 Part 2)
 
-## Student Information
-* **Full Name:** Eberechukwu Osondo, Palesa Kotseli,Lenylcia Moholi Lopes, Onyebuchi Okolie
-* **Student ID:** ST10536068, ST10531251, ST10535858, ST10534194
-* **Module Code:** WEDE5020 (Part 1 - Foundation)
+A responsive, multi-page web application designed for **Temi's Kitchen**, showcasing authentic Nigerian and West African cuisine in Cape Town. This project incorporates semantic HTML5, modern CSS layouts (Grid/Flexbox) with glassmorphism UI design, and interactive JavaScript functionality for client-side form validation, mobile navigation, and dynamic menu filtering.
+
+---
+
+## 📌 Project & Academic Information
+
+* **Module Code:** WEDE5020 (Part 2 - Client-Side Interactive Web Development)
+* **Project Name:** Temi's Kitchen Web Application
 * **Submission Date:** 14 August 2026
 
+### Group Members & Student Details
+* **Eberechukwu Osondo** — ST10536068
+* **Palesa Kotseli** — ST10531251
+* **Lenylcia Moholi Lopes** — ST10535858
+* **Onyebuchi Okolie** — ST10534194
 
-## 1. Project Overview
-This project involves building a 5-page, responsive, and semantically structured HTML5 website for [Temi's Kitchen]. The primary objective is to establish an intuitive digital presence that serves our target audience effectively.
+---
 
+## Objectives & Scope
 
-## 2. Goals & Objectives
-The main goal is to set up a professional online presence that causes Temi's Kitchen be simpler to find and gives consumers with accessible details about its food and services. The website aims to increase awareness of Temi's Kitchen and its offerings, display products and services in an orderly and aesthetically pleasing way, make contact, location plus query details simpler to reach, encourage consumers to enquire regarding food orders and catering plus upgrade the overall consumer familiarity through obvious navigation. Key Performance Indicators (KPIs) will contain website visits, product/service page views, query submissions, contact-detail clicks and engagement with calls-to-action. 
+The primary objective of Part 2 is to advance the static foundation built in Part 1 into a fully functional, interactive, and mobile-responsive digital platform. Key features include:
 
+1. **Enhanced Usability:** Intuitive multi-page navigation across 6 structured HTML documents.
+2. **Interactive JavaScript Features:** 
+   * Custom JavaScript mobile hamburger menu navigation.
+   * Client-side form validation for catering and custom order requests.
+   * Dynamic category filtering for dish listings on the Menu/Services page.
+3. **Advanced CSS Layouts:** CSS Grid and Flexbox integration supporting fluid responsiveness across Desktop, Tablet, and Mobile devices.
+4. **Multi-Location Support:** Explicit representation of the Main Branch (Table View) and Express Pick-Up Hub (Cape Town CBD).
 
-## 3. Website Sitemap & Structure
-* `index.html` — Main Homepage with a hero image and call to action buttons
-* `about.html` — Background, Mission, & business information
-* `Products/services.html` — Showcasing the menu/ food options as well as catering availabilities
-* `enquiry.html` — Online Service & Quote Enquiry Form
-* `contact.html` — Contains contact details, a map and contact form, Main Branch: Table View | Express Pick-Up Hub: Cape Town CBD 
+---
 
+##  Repository Architecture
 
-## 4. Repository & File Architecture
-
+```text
 root/
-├── index.html
-├── about.html
-├── services.html
-├── enquiry.html
-├── contact.html
+├── index.html          # Homepage with featured dishes & call to action
+├── about.html          # Business background, mission, vision & values
+├── services.html       # Interactive menu page with category filtering
+├── enquiry.html        # Online service request form with JS validation
+├── contact.html        # Multi-branch contact & location details
+├── sitemap.html        # Directory of all website pages
+├── README.md           # Project documentation
 ├── css/
+│   └── style.css       # Global styles, layout grids, and media queries
 ├── js/
-└── images/
+│   └── main.js         # Navigation toggle, form validation & DOM logic
+└── images/             # Visual assets, food imagery, and logos

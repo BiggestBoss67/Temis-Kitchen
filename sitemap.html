@@ -3,34 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sitemap for Temi's Kitchen.">
+    <meta name="description" content="Sitemap directory for Temi's Kitchen.">
     <title>Sitemap | Temi's Kitchen</title>
-
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <a href="index.html" class="brand">
-            <!-- Responsive Logo -->
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/temis-kitchen-logo.png">
-                <source media="(max-width: 768px)" srcset="images/temis-kitchen-logo.png">
-                <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
-            </picture>
+            <img src="images/temis-kitchen-logo.png" alt="Temi's Kitchen logo" class="logo-mark">
             <h1>Temi's Kitchen</h1>
         </a>
 
-        <!-- Hamburger Menu Toggle (Mobile) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
 
-        <nav>
+        <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -42,59 +30,27 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
         <section>
             <h1>Website Sitemap</h1>
-            <p>Use the links below to explore the different pages of Temi's Kitchen.</p>
-            <br>
+            <p>Easily navigate through all pages of the website using the links below:</p>
             <ul>
-                <li>
-                    <a href="index.html"><strong>Home</strong></a>
-                    <p>Learn more about Temi's Kitchen and our Nigerian and West African cuisine.</p>
-                </li>
-                <br>
-                <li>
-                    <a href="about.html"><strong>About</strong></a>
-                    <p>Find out more about Temi's Kitchen.</p>
-                </li>
-                <br>
-                <li>
-                    <a href="services.html"><strong>Menu &amp; Services</strong></a>
-                    <p>Explore our featured dishes, catering and custom order services.</p>
-                </li>
-                <br>
-                <li>
-                    <a href="enquiry.html"><strong>Enquiry</strong></a>
-                    <p>Send an enquiry about an order, catering or a custom food request.</p>
-                </li>
-                <br>
-                <li>
-                    <a href="contact.html"><strong>Contact</strong></a>
-                    <p>Find our contact details and location.</p>
-                </li>
-                <br>
-                <li>
-                    <a href="sitemap.html"><strong>Sitemap</strong></a>
-                    <p>View all the pages available on this website.</p>
-                </li>
+                <li><a href="index.html"><strong>Home:</strong> Overview and featured dishes</a></li>
+                <li><a href="about.html"><strong>About Us:</strong> Our background, mission, and vision</a></li>
+                <li><a href="services.html"><strong>Menu &amp; Services:</strong> Interactive dish filtering and catering options</a></li>
+                <li><a href="enquiry.html"><strong>Enquiry:</strong> Quote and catering request form</a></li>
+                <li><a href="contact.html"><strong>Contact:</strong> Location addresses and contact info</a></li>
+                <li><a href="sitemap.html"><strong>Sitemap:</strong> Page index directory</a></li>
             </ul>
-        </section>
-        <br>
-        
-        <section>
-            <h2>Visit Temi's Kitchen</h2>
-            <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
-            <br>
-            <a href="contact.html">Contact Us</a>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Main Branch: Shop 6, 1 Dianthus Road, Table View, Cape Town</p>
+        <p>Express Pick-Up Hub: Cape Town CBD</p>
         <p>&copy; 2026 Temi's Kitchen. All rights reserved.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
