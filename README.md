@@ -1,14 +1,14 @@
 # Temi's Kitchen - Web Development Project (WEDE5020 Part 2)
 
-A responsive, multi-page web application designed for **Temi's Kitchen**, showcasing authentic Nigerian and West African cuisine in Cape Town. This project incorporates semantic HTML5, modern CSS layouts (Grid/Flexbox) with glassmorphism UI design, and interactive JavaScript functionality for client-side form validation, mobile navigation, and dynamic menu filtering.
+A responsive, multi-page web application designed for Temi's Kitchen, showcasing Nigerian and West African cuisine in Cape Town. This project incorporates semantic HTML5, modern CSS layouts (Grid/Flexbox) with glassmorphism UI design, and interactive JavaScript functionality for client-side form validation, mobile navigation, and dynamic menu filtering.
 
 ---
 
-## 📌 Project & Academic Information
+## Information
 
 * **Module Code:** WEDE5020 (Part 2 - Client-Side Interactive Web Development)
 * **Project Name:** Temi's Kitchen Web Application
-* **Submission Date:** 14 August 2026
+* **Submission Date:** 18 August 2026
 
 ### Group Members & Student Details
 * **Eberechukwu Osondo** — ST10536068
@@ -36,15 +36,15 @@ The primary objective of Part 2 is to advance the static foundation built in Par
 
 ```text
 root/
-├── index.html          # Homepage with featured dishes & call to action
-├── about.html          # Business background, mission, vision & values
-├── services.html       # Interactive menu page with category filtering
-├── enquiry.html        # Online service request form with JS validation
-├── contact.html        # Multi-branch contact & location details
-├── sitemap.html        # Directory of all website pages
-├── README.md           # Project documentation
-├── css/
-│   └── style.css       # Global styles, layout grids, and media queries
-├── js/
-│   └── main.js         # Navigation toggle, form validation & DOM logic
-└── images/             # Visual assets, food imagery, and logos
+ index.html          # Homepage with featured dishes & call to action
+ about.html          # Business background, mission, vision & values
+ services.html       # Interactive menu page with category filtering
+ enquiry.html        # Online service request form with JS validation
+ contact.html        # Multi-branch contact & location details
+ sitemap.html        # Directory of all website pages
+ README.md           # Project documentation
+ css/
+    style.css       # Global styles, layout grids, and media queries
+ js/
+   main.js         # Navigation toggle, form validation & DOM logic
+ images/             # Visual assets, food imagery, and logos
